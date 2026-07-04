@@ -567,6 +567,8 @@ function attachHandlers(){
         const fieldEl = document.getElementById('field-'+k);
         const inputEl = document.getElementById('inp-'+k);
         const errEl = document.getElementById('err-'+k);
+        if (!fieldEl || !inputEl || !errEl) return;
+        
         if(errors[k]){
           fieldEl.classList.add('has-err');
           inputEl.classList.add('err');
